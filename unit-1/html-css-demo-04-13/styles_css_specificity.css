@@ -1,0 +1,91 @@
+
+
+/***
+   _ _ _
+***/
+
+/** 0 0 1 **/
+p {
+   
+}
+
+/** 1 0 0 **/
+#myname {
+    color: aqua !important;
+}
+
+/** 0 1 0 **/
+.myclass2 {
+    color: blue;
+}
+/*** 0 1 1 ***/
+p.myclass2 {
+    color: blue;
+}
+
+/** 0 1 0 **/
+.myclass {
+    color: lightgreen;
+}
+
+
+
+/** 
+   100 is the highest
+**/
+
+
+/**
+   Specificity : I C E
+**/
+div {
+    height: 200px;
+    width: 500px;
+    border: 1px solid black;
+}
+
+/** Group selectors
+
+.green-box : 0 1 0
+div.green-box : 0 1 1 
+
+**/
+div.green-box, 
+div.yellow-box, 
+div.red-box {
+    height: 200px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+.green-box {
+    background-color: lightgreen;
+}
+
+.yellow-box {
+    background-color: lightyellow;
+}
+
+.red-box {
+    background-color: lightsalmon;
+}
+
+/**
+   Multiple selector
+   .red-box.bold-weight : 0 2 0
+   div.red-box.bold-weight : 0 2 1
+**/
+.red-box.bold-weight {
+    font-weight:bold;
+}
+
+/***
+    Descendant selector
+**/
+.yellow-box p {
+ 
+}
+
+div.yellow-box > div >p{
+    font-style: italic; 
+}

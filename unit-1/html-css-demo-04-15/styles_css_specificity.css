@@ -1,0 +1,64 @@
+h2 {
+    color:blue
+}
+
+.my-heading-2 {
+    color: brown;
+}
+
+/**
+
+  Complex Selectors
+
+**/
+
+div {
+}
+
+/**
+ Group Selector
+**/
+.green-box , .yellow-box , .red-box
+{
+    border: 1px solid black;
+    width: 100%;
+    height: 200px;
+}
+
+.green-box {
+    background-color: lightgreen;
+}
+
+.yellow-box {
+    background-color: lightyellow
+    ;
+}
+
+.red-box {
+    background-color: salmon;
+}
+
+
+/**
+   Multiple Selector
+**/
+.green-box.bold-font {
+    font-weight: bold;
+}
+
+
+/**
+  Descendants Selectors
+**/
+.yellow-box p
+{
+    font-style: italic;
+}
+
+
+/**
+    Child Selector
+**/
+.red-box>div {
+    color: red;
+}

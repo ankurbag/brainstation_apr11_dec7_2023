@@ -1,0 +1,19 @@
+header {
+    border: olive;
+    background: url("./pet-banner-5.jpg");
+    height: 200px;
+}
+
+header h1 {
+    text-align: center;
+    
+}
+.main {
+    height: 80%;
+    background-color: beige;
+    border: olive;
+    padding: 10px;
+}
+
+
+
