@@ -1,0 +1,29 @@
+/**
+ Demo 1 : Float left
+**/
+
+img {
+	height: 300px;
+	width: 300px;
+	float: none;
+	margin-right: 1.25rem;
+}
+
+.img2 {
+	height: 300px;
+	width: 300px;
+	float: right;
+	margin-right: 1.25rem;
+}
+
+div {
+	height: 300px;
+	width: 300px;
+	float: left;
+	background-color: rgba(255, 0, 0, 0.5);
+}
+
+p {
+	/* background-color: yellow;
+	border: 1px solid red; */
+}

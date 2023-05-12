@@ -1,0 +1,36 @@
+@use './variables' as *;
+
+@keyframes slide-fade {
+  from {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  0% {
+    background: #f24768;
+    color: $white;
+  }
+  50% {
+    background: #92f2f8;
+    color: $black;
+  }
+  100% {
+    background: #9e00eb;
+    color: $white;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

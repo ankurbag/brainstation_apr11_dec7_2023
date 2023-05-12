@@ -1,0 +1,54 @@
+/**
+   This is a comment
+**/
+
+* {
+    /**
+     Block of props
+    **/
+    
+}
+
+/**
+    Styling the basic structure
+**/
+header {
+    border: 1px solid olive;
+    height: 20%;
+    background-color: beige;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+
+main {
+    border: 1px solid olive;
+    height: 70%;
+    background-color: beige;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 10px;
+}
+
+footer {
+    border: 1px solid olive;
+    height: 10%;
+    background-color: beige;
+    padding: 15px;
+}
+
+.card {
+    width: 200px;
+    height:300px;
+    display: inline-block;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;;
+}
+
+.container {
+    margin: auto;
+    padding: 0px;
+}

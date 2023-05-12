@@ -1,0 +1,42 @@
+/* Do not edit this code, instead scroll down to the bottom and add new CSS rules!
+
+You DO NOT need to make the heights of the divs match the heights in the screenshots from Compass
+*/
+
+/* In fact, don't even worry about the code here!! */
+
+.box {
+	flex: 1;
+	height: 150px;
+	font-size: 40px;
+	margin: 0;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.a {
+	background: #b6bfa0;
+}
+
+.b {
+	background: #6d9887;
+}
+
+.c {
+	background: #ec82b5;
+}
+
+/* Add your code below */
+.container {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.b {
+	flex-grow: 2;
+}
+.c {
+	flex-grow: 1;
+}

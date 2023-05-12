@@ -1,0 +1,252 @@
+@use './partials/variables' as *;
+@use './partials/animations' as *;
+
+/* box-sizing fix */
+* {
+  box-sizing: border-box;
+  // border: 1px dashed lightgrey;
+}
+
+/* root element */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: $white;
+  color: $black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    text-decoration: none;
+    color: $secondary-color;
+  }
+}
+
+.container {
+  max-width: 1240px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.animation-group {
+  border: 1px solid darken($white, 10%);
+  padding: 0.625rem 0;
+}
+
+footer {
+  padding: 0.625rem 0;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Transition animations
+   ========================================================================== */
+
+/* Buttons 
+   ========================================================================== */
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.625rem 1rem;
+  border: 1px solid $black;
+  cursor: pointer;
+  box-shadow: unset;
+  background: $black;
+  color: $white;
+
+  // transition: 0.5s;
+
+  transition: background 0.5s, color 0.5s;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $black;
+    // letter-spacing: 2px;
+  }
+  &--space {
+    background: linear-gradient(rgba($black, 0.5), rgba($black, 0.5)),
+      url(../assets/img/nebula-bg.jpg);
+    background-position: left center;
+    &:hover {
+      color: $white;
+      background: linear-gradient(rgba($black, 0.3), rgba($black, 0.3)),
+        url(../assets/img/nebula-bg.jpg);
+      background-position: right center;
+    }
+  }
+}
+
+/* Cards
+   ========================================================================== */
+.cards {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  // max-width: 300px;
+  margin: 0.187rem;
+  width: 100%;
+  max-width: 18.75rem;
+
+  position: relative;
+  overflow: hidden;
+
+  line-height: 0;
+  background: rgba($black, 0.3);
+  box-shadow: 0 5px 10px -5px rgba($black, 0.3);
+
+  &:active {
+    border: 2px solid black;
+  }
+
+  &:hover {
+    z-index: 99;
+    .card__text-wrapper {
+      transform: translateY(0);
+    }
+    .card__img {
+      transform: scale(1.6);
+    }
+  }
+  &__img {
+    transform: scale(1);
+    transition: $transition-speed * 2;
+  }
+  &__text-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba($white, 0.96);
+    padding: 0.625rem;
+
+    transform: translateY(100%);
+
+    transition: $transition-speed;
+  }
+  &__title {
+    margin: 0.625rem 0;
+    line-height: 1.75rem;
+    color: $black;
+  }
+  &__description {
+    font-size: 1.1rem;
+    line-height: 1.25rem;
+    color: $black;
+  }
+}
+
+/* Rotating/spinning element/div
+   ========================================================================== */
+.rotate-elem {
+  position: relative;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 72, 104, 1) 20.25%,
+    rgba(242, 71, 104, 1) 20.25%,
+    rgba(158, 0, 236, 1) 80.25%
+  );
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  transition: $transition-speed * 1.5;
+  &:hover {
+    transform: rotate(180deg);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: $black;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    left: 50%;
+    top: -10%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   Keyframe animations
+   ========================================================================== */
+.modal-box {
+  position: fixed;
+  top: 5vh;
+  left: 50%;
+  display: inline-block;
+  padding: 1rem;
+  width: 90%;
+  height: 90vh;
+  background: rgba($secondary-color, 0.96);
+  opacity: 0;
+  transform: translate(-50%, -110%);
+  animation: slide-fade 0.5s 3s ease-in-out forwards;
+  animation-play-state: paused;
+  &--is-active {
+    // animation-play-state: running;
+  }
+}
+
+.glow-box {
+  display: inline-block;
+  padding: 1rem;
+  animation: glow 10s linear infinite alternate;
+}
+
+.rotate-elem-anim {
+  position: relative;
+  margin: 6rem auto;
+  background: lighten($black, 25%);
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+  animation: rotate $transition-speed * 10 linear infinite;
+  animation-play-state: paused;
+  &:hover {
+    animation-play-state: running;
+    // animation: rotate $transition-speed * 10 linear infinite;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    background: $black;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    left: 50%;
+    bottom: -20%;
+    transform: translateX(-50%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background: $black;
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    left: 50%;
+    top: -20%;
+    transform: translateX(-50%);
+  }
+}

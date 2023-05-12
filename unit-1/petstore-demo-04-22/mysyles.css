@@ -1,0 +1,10 @@
+div, img {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px;
+}
+
+.div1, .div2 , .div3 {
+    display: inline-block;
+    /* vertical-align:top; */
+}

@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+div {
+    border: 1px solid black;
+    height: 300px;
+    width: 300px; 
+}
+
+.div1 {
+    display: block;
+}
+
+.div2 {
+    display: inline;
+
+}
+
+.div3 {
+    display: inline-block;
+    height: auto;
+}
+
+p {
+   
+}
+span {
+    border: 1px solid red;
+    font-style: italic;
+}
+
+.div3 img {
+    display: inline-block;
+    height: 100px;
+    width: 100px; 
+}
+
+.inline-p {
+    display: inline-block;
+}

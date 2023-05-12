@@ -1,0 +1,36 @@
+.btn {
+	background-color: gray;
+	color: white;
+	width: 12.5rem;
+	height: 2.5rem;
+	transition: background-color 0.3s 0.5s;
+	transition-timing-function: cubic-bezier(0, 0, 0.9, -0.03);
+}
+
+.btn:hover {
+	background-color: salmon;
+}
+
+div {
+	display: inline-block;
+	height: 300px;
+	width: 300px;
+	background-color: rgb(133, 216, 244);
+}
+
+div:hover {
+	transform: rotate(45deg);
+}
+
+@keyframes color-change {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: yellow;
+	}
+}
+
+.animated-element {
+	animation: color-change 4s;
+}

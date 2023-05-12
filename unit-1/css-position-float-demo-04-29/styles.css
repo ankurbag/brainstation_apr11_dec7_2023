@@ -1,0 +1,86 @@
+body {
+	font-size: 18px;
+	height: 200vh;
+}
+
+.parent {
+	background-color: blue;
+	color: white;
+	height: auto;
+	width: 100vw;
+	border: 1px solid black;
+	/* position: relative; */
+}
+
+.child {
+	height: 100px;
+	width: calc(100vw - 50px);
+	border: 1px solid black;
+	color: black;
+}
+
+.child-one {
+	background-color: lightgray;
+}
+
+.child-two {
+	background-color: lightsalmon;
+}
+.child-three {
+	background-color: lightyellow;
+}
+
+.child-four {
+	background-color: lightcyan;
+}
+
+/**
+ DEMO 1
+
+  CSS positioning doesnot inherit
+**/
+
+/**
+DEMO 2
+
+ Relative moves things wrt parent
+**/
+
+/* .child-one {
+	position: relative;
+	left: 50px;
+	top: 100px;
+} */
+
+/**
+DEMO 2
+
+ Absolute moves things wrt root
+**/
+/* .child-two {
+	position: absolute;
+	left: 50px;
+	top: 100px;
+} */
+
+/**
+ Demo 3
+ Fixed == absolute
+**/
+/* .child-three {
+	position: fixed;
+	bottom: 100px;
+} */
+
+/**
+ Demo 4
+ Sticky = Fixed + Relative
+**/
+.child-four {
+	position: sticky;
+	bottom: 100px;
+}
+
+/**
+ Will top, left, right work with static
+**/

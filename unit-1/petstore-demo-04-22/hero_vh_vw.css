@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,700');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.6;
+  font-family: 'Rubik', sans-serif;
+}
+
+.hero {
+  background: linear-gradient(to left, #83a4d4 , #b6fbff);
+  padding: 10vh 0;
+  
+  height: 100vh;
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 3px 3px 25px 5px rgba(0, 0, 0, .5);
+}
+
+
+.hero-title__header {
+  color: steelblue;
+}
+
+.hero-title__btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: steelblue;
+  padding: 1em 4em;
+}
+
+.hero-title__header {
+  font-size: 8vw;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0 0 .25em;
+}
+
+.hero-title__content {
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin: 0 0 1.5em;
+}

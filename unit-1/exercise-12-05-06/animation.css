@@ -1,0 +1,21 @@
+/**
+
+    Transition
+
+***/
+
+.btn {
+	height: 1.5rem;
+	width: 11.25rem;
+	background-color: aqua;
+	color: black;
+	transition: background-color 0.5s 0.5s;
+	transition-timing-function: cubic-bezier(0.88, -0.14, 0.07, 1.01);
+}
+
+.btn:hover {
+	height: 1.5rem;
+	width: 11.25rem;
+	background-color: rgb(238, 255, 0);
+	color: rgb(233, 8, 8);
+}

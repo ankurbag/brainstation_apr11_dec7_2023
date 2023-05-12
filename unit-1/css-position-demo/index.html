@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Positioning + Float Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h2>Position property</h2>
+  <div class="parent">
+    <div class="item item-1">Static positioning</div>
+    <!-- Maintains the document flow. Relative to it's position in flow -->
+    <div class="item item-2">Relative positioning</div>
+    <!-- Gets taken out of the document flow. Relative to first non-static parent position -->
+    <div class="absolute-container">
+      <div class="item item-3">Absolute positioning</div>
+    </div>
+    <!-- Gets taken out of the document flow. Relative to the viewport -->
+    <div class="item item-4">Fixed positioning</div>
+    <!-- Sticky positioning. Relative to it's parent. Static until it hits the defined threshold and then behaves as fixed -->
+    <div class="item item-5">Sticky positioning</div>
+  </div>
+  <div class="absolute">Absolute positioning relative to body element</div>
+  <h2>Absolute Stacking Order</h2>
+  <div class="absolute-stacking">
+    <div class="stack-item stack-item-1"></div>
+    <div class="stack-item stack-item-2"></div>
+    <div class="stack-item stack-item-3"></div>
+  </div>
+
+  <h2>Floats</h2>
+  <h3>Default float behaviour without clearfix</h3>
+  <div class="floats no-clearfix">
+    <img src="http://placekitten.com/200/300" />
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus debitis corporis voluptatem sint quas sunt incidunt non consequuntur, aliquam alias consequatur quasi odio iste, natus rerum autem eos facilis saepe!</p>
+    <img src="https://placekitten.com/200/350" />
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, esse temporibus ullam culpa odio obcaecati quis non animi, vero, consectetur vitae quibusdam asperiores magnam facilis maiores facere sapiente dolorem repellat!</p>
+  </div>
+  <h3>Clearfix applied</h3>
+  <!-- Clearfix is required to make the parent fit the width of all content -->
+  <div class="floats clearfix-modern">
+    <img src="http://placekitten.com/200/300" />
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus debitis corporis voluptatem sint quas sunt incidunt non consequuntur, aliquam alias consequatur quasi odio iste, natus rerum autem eos facilis saepe!</p>
+    <img src="https://placekitten.com/200/350" />
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, esse temporibus ullam culpa odio obcaecati quis non animi, vero, consectetur vitae quibusdam asperiores magnam facilis maiores facere sapiente dolorem repellat!</p>
+  </div>
+</body>
+</html>

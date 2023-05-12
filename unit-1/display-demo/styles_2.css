@@ -1,0 +1,19 @@
+div {
+    border: 1px solid black;
+    background-color: beige;
+    height: 300px;
+    width: 300px;
+}
+
+.div-1 {
+    display: block;
+}
+
+.div-2 {
+    display: inline;
+}
+
+.div-3 {
+    display: inline-block;
+}
+

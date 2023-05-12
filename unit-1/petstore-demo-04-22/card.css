@@ -1,0 +1,62 @@
+/**
+  NO BEM
+**/
+
+/* 
+section, header {
+    border: 1px solid black;
+    height: auto;
+    width: 300px;
+}
+
+div section img {
+    width: 100%;
+}
+
+div section button {
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+}
+
+button.green-btn {
+    background-color: rgb(129, 241, 119);
+}
+
+button.orange-btn {
+    background-color: rgb(245, 200, 117);
+} */
+
+/**
+ BEM
+**/
+.card {
+    box-shadow: 3px 3px lightgray, -1em 0 .4em lightgray;
+    height: auto;
+    width: 300px;
+}
+
+.card__title {
+    text-align: center;
+}
+
+.card-imgblock__img {
+    width: 100%;
+}
+
+.card__btns-btn {
+    margin-left: 1.5rem;
+    padding: 0.5rem;
+}
+
+.card__content{
+    text-align: justify;
+    padding: 0.5rem;;
+}
+.card__btns-btn--green {
+    background-color: rgb(129, 241, 119);
+}
+
+.card__btns-btn--orange {
+    background-color: rgb(245, 200, 117);
+}
+

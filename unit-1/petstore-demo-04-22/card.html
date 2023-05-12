@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <link rel="stylesheet" href="./card.css" type="text/css" />
+    
+</head>
+
+<body>
+
+    <h1>BEM Card Demo</h1>
+    <!-- Card -->
+    <div class="card">
+        <!-- Header-->
+        <header class="card__title">
+            <h2>Card Title</h2>
+        </header>
+        
+        <!-- Image-->
+        <section class="card-imgblock">
+            <img class="card-imgblock__img" src="https://picsum.photos/id/678/2000/1000" />
+            <p>Caption</p>
+        </section>
+
+        <!-- Content-->
+        <section class="card__content">
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat minima, maiores delectus assumenda in
+                provident fugiat voluptatem et deleniti dignissimos excepturi itaque veritatis nostrum impedit molestias
+                neque voluptatum. Modi, est.
+            </p>
+        </section>
+
+        <!-- Button -->
+        <section class="card__btns">
+            <button class="card__btns-btn card__btns-btn--green">Green Button</button>
+            <button class="card__btns-btn card__btns-btn--orange">Orange Button</button>
+        </section>
+    </div>
+
+</body>
+
+</html>

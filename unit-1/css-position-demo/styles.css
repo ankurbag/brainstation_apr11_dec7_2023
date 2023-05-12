@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0 2rem 250px 2rem;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Position property */
+.parent {
+  /* position: relative; */
+  max-width: 600px;
+  min-height: 1500px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: honeydew;
+  border: 2px solid forestgreen;
+}
+
+.item,
+.absolute {
+  width: 100%;
+  height: 150px;
+  padding-top: 30px;
+  margin-bottom: 25px;
+  background: rgba(34, 56, 65, 0.25);
+  font-size: 4rem;
+  text-align: center;
+}
+
+.absolute-container {
+  /* position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: pink; */
+}
+
+.item-2 {
+  /* position: relative; */
+  top: -50px;
+  left: 250px;
+}
+
+.item-3 {
+  /* position: absolute; */
+  top: -100px;
+  right: -50%;
+}
+
+.item-4 {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+}
+
+.item-5 {
+  /* position: sticky; */
+  top: 0;
+  left: 0;
+}
+
+.absolute {
+  /* position: absolute; */
+  width: 150px;
+  padding: 25px;
+  left: 0;
+  top: 150px;
+  font-size: 1.5rem;
+}
+
+/* Absolute Stacking Order */
+.absolute-stacking {
+  /* position: relative; */
+  width: 200px;
+  height: 200px;
+  background-color: papayawhip;
+}
+
+.stack-item {
+  /* position: absolute; */
+  width: 100px;
+  height: 100px;
+}
+
+.stack-item-1 {
+  background-color: gold;
+  z-index: 1; /* z-index only applies to non-static elements and also take HTML structure into consideration, look up Stacking Context for more details */
+  top: 10px;
+  left: 10px;
+}
+
+.stack-item-2 {
+  background-color: red;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
+
+.stack-item-3 {
+  background-color: blue;
+  top: 30px;
+  left: 30px;
+  /* default z-index is 0 */
+}
+
+/* Floats */
+.floats {
+  width: 70%;
+  background-color: turquoise;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.no-clearfix {
+  font-size: 1.25rem;
+}
+
+.floats > img {
+  /* float: left; */
+  margin: 15px;
+}
+
+.floats > img:last-of-type {
+  /* float: right; */
+}
+
+/* Clearfix */
+.clearfix-modern:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Legacy */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */

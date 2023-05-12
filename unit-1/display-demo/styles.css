@@ -1,0 +1,65 @@
+body {
+    font-family: Arial;
+    box-sizing: content-box;
+}
+
+
+section {
+    margin-bottom: 3rem; /* Just adding some separation between our demos */
+}
+
+.block-example {
+    background-color: khaki;
+    width: 25%;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.inline-example {
+    color: red;
+}
+
+.inline-heading {
+    display: inline;
+}
+
+.vertically-aligned-image {
+    vertical-align: middle;
+}
+
+.navbar {
+    background-color: lavender;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* opacity: 0; */
+}
+
+.navbar > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    background-color: lightgreen;
+    padding: 1rem;
+    margin-left: -4px;
+}
+
+.large-item {
+    height: 5rem;
+    vertical-align: middle;
+}
+
+.image-gallery {
+    background-color: pink;
+    font-size: 0;
+}
+
+.image-gallery img {
+    width: 25%;
+    border: 5px solid yellow;
+    padding: 1rem;
+    background-color: white;
+}
