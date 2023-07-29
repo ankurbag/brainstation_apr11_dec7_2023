@@ -1,0 +1,4 @@
+# Files for git to not track
+*.css
+*.css.map
+.DS_Store

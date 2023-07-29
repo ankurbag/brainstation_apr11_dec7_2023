@@ -19,3 +19,36 @@
 	background-color: rgb(238, 255, 0);
 	color: rgb(233, 8, 8);
 }
+
+.box {
+	background-color: #07beb8;
+	height: 300px;
+	width: 300px;
+	font-size: x-large;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.element-rotate {
+}
+
+.box:hover {
+	transform: scale(2, 2);
+}
+.element-rotate-reset {
+	transform: rotate(0);
+}
+
+@keyframes color-change {
+	from {
+		background-color: red;
+	}
+	to {
+		background-color: green;
+	}
+}
+
+.element-animate {
+	animation: color-change 4s ease-in 0.3s;
+}

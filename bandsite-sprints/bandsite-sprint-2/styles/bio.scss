@@ -1,0 +1,184 @@
+@use "partials/mixins" as *;
+@use "partials/colors" as *;
+@use "partials/global" as *;
+
+// QUOTE SECTION styling
+
+.quote {
+  @include desktop {
+    width: 41.25rem; //Fixed width specified to keep quote structure uniform through sizes above 1280px
+  }
+  &__text,
+  &__author {
+    @include mobile-body;
+    font-weight: 700;
+  }
+  &__text {
+    @include tablet {
+      font-size: 1.375rem;
+      line-height: 1.875rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+  &__author {
+    @include tablet {
+      @include desktop-body;
+      font-weight: 600;
+    }
+  }
+}
+
+// PHOTO GALLERY styling
+
+.photo-gallery {
+  @include flex(flex, center, center, column);
+  gap: 1rem;
+
+  @include tablet {
+    @include flex(flex, center);
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  &__item {
+    width: 100%;
+
+    @include tablet {
+      flex: 1 0 30%;
+    }
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      filter: grayscale(0.5);
+      transition: 1s;
+    }
+    &:hover {
+      @include tablet {
+        filter: grayscale(0);
+        transition: 1s;
+      }
+    }
+  }
+}
+
+// FORM styling
+
+.form {
+  @include flex(flex, normal, center);
+  @include mobile-labels-buttons;
+  gap: 1rem;
+
+  @include tablet {
+    margin: 0 4rem;
+    @include desktop-labels-buttons;
+  }
+
+  @include desktop {
+    margin: 0 16rem;
+  }
+
+  &__container {
+    @include flex(flex, normal, center, column);
+    flex: 1 0;
+    margin-bottom: 1rem;
+  }
+  &__label {
+    color: $mercury;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+  &__input {
+    @include mobile-labels-inputs;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $mercury;
+    min-height: 2.25rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    background-color: $alabaster;
+
+    @include tablet {
+      @include desktop-labels-inputs;
+    }
+    &--comment {
+      @extend .form__input;
+      font-family: "AvenirNextLTPro";
+    }
+  }
+}
+
+// AVATAR styling
+
+.avatar {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: transparent;
+  background-color: $mercury;
+  border-radius: 50%;
+  overflow: hidden;
+  align-self: flex-start;
+  margin-top: 1.875rem;
+
+  @include tablet {
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1.5625rem;
+  }
+
+  &--comment {
+    @extend .avatar;
+    margin: 0;
+  }
+  &__image {
+    object-fit: cover;
+    object-position: left;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// CARD LIST styling
+
+.cards-list {
+  @include tablet {
+    margin: 0 4rem;
+  }
+
+  @include desktop { 
+    margin: 0 16rem
+  }
+}
+
+// COMMENT Styling
+
+.comment {
+  @include flex(flex, space-between);
+  padding: 1rem 0 1rem 0;
+
+  &__text {
+    @include mobile-body;
+    width: 80%;
+
+    @include tablet {
+      @include desktop-body;
+    }
+  }
+  &__container {
+    @include flex(flex, space-between, center);
+  }
+  &__heading {
+    @include mobile-subheader;
+    margin: 0;
+  }
+  &__timestamp {
+    color: $mercury;
+    margin: 0;
+  }
+  &__body {
+    margin: 1rem 0 0 0;
+  }
+}

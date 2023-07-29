@@ -12,17 +12,35 @@
 	justify-content: center;
 	align-items: center;
 }
+header {
+	position: fixed;
+	background-color: #2f294d;
+	color: white;
+}
+
+img {
+	height: 200px;
+	width: 200px;
+}
 
 .a {
 	background: #ec6443;
+	height: 300px;
 }
 
 .b {
 	background: #48998d;
+	border: 1px solid black;
 }
 
 .c {
+	display: flex;
 	background: #c6d86d;
+	border: 1px solid black;
+}
+.post__profile-img {
+	height: 100px;
+	width: 100px;
 }
 
 .d {
@@ -43,6 +61,7 @@
 /* Add your code below */
 .container {
 	display: flex;
+	width: 80vw;
 }
 
 .container-2 {

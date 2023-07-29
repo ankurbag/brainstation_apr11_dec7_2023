@@ -1,0 +1,53 @@
+html,
+body {
+	box-sizing: border-box;
+	overflow-x: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	width: 100vw;
+	border: 1px solid black;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	display: inline-block;
+	border: 1px solid black;
+}
+
+.userprofile {
+	display: inline-block;
+	border: 1px solid black;
+	margin-right: 1.5rem;
+}
+
+.container {
+	display: flex;
+	width: 90vw;
+	height: 100vw;
+	border: 1px solid black;
+	margin: auto;
+	flex-direction: column;
+}
+
+.post {
+	border: 1px solid black;
+}
+
+.post__title {
+	border: 1px solid black;
+}
+
+.post__title-img {
+	height: 30px;
+	width: 30px;
+}
+
+.post__content {
+	border: 1px solid black;
+	height: 30vh;
+	width: 90vw;
+}

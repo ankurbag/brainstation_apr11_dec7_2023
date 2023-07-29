@@ -1,0 +1,102 @@
+/**
+
+    Transition
+
+***/
+
+.btn {
+	height: 1.5rem;
+	width: 11.25rem;
+	background-color: aqua;
+	color: black;
+	transition: background-color 0.5s 0.5s;
+	transition-timing-function: cubic-bezier(0.88, -0.14, 0.07, 1.01);
+}
+
+.btn:hover {
+	height: 1.5rem;
+	width: 11.25rem;
+	background-color: rgb(238, 255, 0);
+	color: rgb(233, 8, 8);
+}
+
+.box,
+.box-2 {
+	background-color: #07beb8;
+	height: 300px;
+	width: 300px;
+	font-size: x-large;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/**
+	Transform properties
+**/
+.element-rotate {
+	transform: rotate(50deg);
+}
+
+.element-rotate-reset {
+	transform: rotate(0);
+}
+
+.box:hover {
+	transform: rotate(50deg) scale(2) translate(50%);
+}
+
+/**
+	Animation
+**/
+
+@keyframes color-change {
+	from {
+		background-color: #07beb8;
+	}
+	to {
+		background-color: #e38b38;
+	}
+}
+
+.box-2 {
+	animation: color-change 4s ease-in 0.25s infinite;
+}
+
+/**
+
+Move from left to right
+
+**/
+
+@keyframes move {
+	0% {
+	}
+	10% {
+		opacity: 0;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		transform: translate(200px, 0);
+	}
+}
+.area {
+	width: 250px;
+	height: 50px;
+	border: 2px solid #f06d06;
+	border-radius: 50px;
+}
+
+.mover {
+	width: 50px;
+	height: 50px;
+	background: #f06d06;
+	border-radius: 50%;
+	animation: move 5s infinite ease-in-out;
+}
